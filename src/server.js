@@ -6,7 +6,7 @@ const app = express();
 
 // some legacy browsers choke on 204
 app.use(cors({ optionsSuccessStatus: 200 }));
-app.use(express.static('public'));
+app.use(express.static(process.cwd() + '/src/public'));
 
 /**
  * Middleware function to log request information
